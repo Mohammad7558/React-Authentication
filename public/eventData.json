@@ -2,151 +2,91 @@
   {
     "id": "1",
     "name": "Tech Innovators Conference 2025",
-    "thumbnail": "https://i.ibb.co.com/gLbNCs3y/img-1.jpg",
+    "thumbnail": "https://i.ibb.co.com/F4W1pRyP/img-1.jpg",
     "category": "Technology",
     "date": "2025-05-15",
     "location": "Dhaka Convention Center, Dhaka",
     "entry_fee": 500,
-    "description": "Join the nation's top tech minds at the Tech Innovators Conference 2025, an immersive two-day gathering celebrating innovation and digital transformation. This prestigious event will feature keynote speeches from world-renowned leaders in software development, artificial intelligence, and digital entrepreneurship. Attendees will have the opportunity to participate in interactive breakout sessions, hands-on workshops on cutting-edge technologies, and panel discussions tackling pressing issues in the tech industry. Explore exhibitor booths showcasing new products, engage in networking with fellow professionals, and witness the unveiling of groundbreaking innovations that are shaping the future of Bangladesh's tech landscape. Ideal for developers, engineers, entrepreneurs, investors, and students eager to influence the trajectory of technology in South Asia and beyond."
+    "description": "Join the nation's top tech minds at the Tech Innovators Conference 2025, an immersive two-day gathering celebrating innovation and digital transformation..."
   },
   {
     "id": "2",
     "name": "Digital Marketing Expo 2025",
-    "thumbnail": "https://i.ibb.co.com/LdkZNhTS/img-2.jpg",
+    "thumbnail": "https://i.ibb.co.com/d48hFzpz/img-2-min.jpg",
     "category": "Marketing",
     "date": "2025-06-10",
     "location": "Bangabandhu Hall, Chattogram",
     "entry_fee": 300,
-    "description": "Stay ahead in the ever-evolving world of digital marketing at the Digital Marketing Expo 2025. This high-impact event will bring together leading minds in SEO, social media strategy, content marketing, email automation, PPC, and data analytics. Through workshops, expert-led seminars, and panel discussions, attendees will gain actionable insights into the latest tools, trends, and best practices shaping the marketing world. Real-life case studies will be dissected, and participants will have the chance to engage with marketing software providers, digital agencies, and influential thought leaders. Whether you're a seasoned marketer, small business owner, or marketing student, this expo will equip you with the knowledge and connections to thrive in a digital-first world."
+    "description": "Stay ahead in the ever-evolving world of digital marketing at the Digital Marketing Expo 2025..."
   },
   {
     "id": "3",
     "name": "Startup Summit Bangladesh",
-    "thumbnail": "https://i.ibb.co.com/5gH3KCny/img-3.jpg",
+    "thumbnail": "https://i.ibb.co.com/G4Z8cQWb/img-3-min.jpg",
     "category": "Entrepreneurship",
     "date": "2025-07-05",
     "location": "Innovation Hub, Dhaka",
     "entry_fee": 700,
-    "description": "The Startup Summit is Bangladesh's premier platform for entrepreneurs to connect, learn, and grow. This empowering event spans two days of activities including keynote speeches by successful startup founders, investor pitch competitions, funding workshops, and product showcases. Participants can join mentorship sessions, attend practical masterclasses on scaling businesses, and explore government and private sector support for startups. The summit fosters collaboration between venture capitalists, angel investors, incubators, and innovators, creating an environment ripe for new ventures to flourish. Whether you're a first-time founder or a seasoned entrepreneur, the Startup Summit offers the tools and network necessary to accelerate your growth journey."
+    "description": "The Startup Summit is Bangladesh's premier platform for entrepreneurs to connect, learn, and grow..."
   },
   {
     "id": "4",
     "name": "AI & Machine Learning Fair",
-    "thumbnail": "https://i.ibb.co.com/6JDXk8QX/img-4.jpg",
+    "thumbnail": "https://i.ibb.co.com/JRpCf6mV/img-4-min.jpg",
     "category": "Artificial Intelligence",
     "date": "2025-08-22",
     "location": "ICT Tower, Dhaka",
     "entry_fee": 600,
-    "description": "Explore the cutting edge of technology at the AI & Machine Learning Fair, a comprehensive event where innovation meets application. This fair will bring together AI researchers, developers, data scientists, and tech enthusiasts to showcase the latest advancements in machine learning, robotics, natural language processing, and computer vision. The agenda includes live demonstrations, AI startup presentations, coding challenges, and academic talks covering both theoretical and practical aspects of AI. Attendees will get hands-on experience with AI tools and frameworks, discover real-world implementations in healthcare, finance, and education, and engage in discussions on ethical AI development."
+    "description": "Explore the cutting edge of technology at the AI & Machine Learning Fair..."
   },
   {
     "id": "5",
     "name": "Green Energy Expo",
-    "thumbnail": "https://i.ibb.co.com/kP0j4k4/img-5.jpg",
+    "thumbnail": "https://i.ibb.co.com/1G6vrytm/img-5-min.jpg",
     "category": "Environment",
     "date": "2025-09-18",
     "location": "Sylhet City Center",
     "entry_fee": 200,
-    "description": "Discover the future of sustainability at the Green Energy Expo, where environmental innovation takes center stage. This one-of-a-kind event focuses on clean energy technologies including solar power, wind energy, electric vehicles, energy-efficient appliances, and smart grid solutions. Experts from around the world will share research, policy insights, and success stories from clean energy initiatives. Attendees can interact with developers of green tech, explore eco-friendly startups, and attend sessions on environmental entrepreneurship. The expo aims to inspire both individuals and organizations to adopt greener lifestyles and contribute to a more sustainable planet."
+    "description": "Discover the future of sustainability at the Green Energy Expo..."
   },
   {
     "id": "6",
     "name": "Women in Tech Conference",
-    "thumbnail": "https://i.ibb.co.com/ZRRnfq5x/img-6.jpg",
+    "thumbnail": "https://i.ibb.co.com/PGMcjKZt/img-6-min.jpg",
     "category": "Diversity",
     "date": "2025-10-10",
     "location": "Rajshahi University Auditorium",
     "entry_fee": 150,
-    "description": "An empowering celebration of women in the tech industry, the Women in Tech Conference aims to create a more inclusive future in STEM. The event features inspiring keynotes by female tech pioneers, skill-building workshops in coding, cybersecurity, and data science, and mentorship circles connecting young professionals with industry veterans. Panels will discuss overcoming gender bias, promoting leadership, and achieving work-life balance in technology careers. Inclusive hiring companies will host career booths, and breakout sessions will foster peer networking and idea sharing. Open to all genders, this conference champions equal opportunity and empowerment in tech."
+    "description": "An empowering celebration of women in the tech industry..."
   },
   {
     "id": "7",
     "name": "Blockchain & Crypto Meetup",
-    "thumbnail": "https://i.ibb.co.com/zW6kpPh9/img-7.jpg",
+    "thumbnail": "https://i.ibb.co.com/BHt2gJrS/img-7-min.jpg",
     "category": "Finance",
     "date": "2025-11-02",
     "location": "Tech Park, Dhaka",
     "entry_fee": 800,
-    "description": "Dive deep into the decentralized future at the Blockchain & Crypto Meetup. This event caters to crypto enthusiasts, blockchain developers, investors, and newcomers eager to explore this rapidly evolving space. Topics include cryptocurrency trading strategies, NFT marketplaces, decentralized finance (DeFi), and blockchain integration in traditional systems. Attendees will witness live trading demonstrations, security walkthroughs, and panel discussions from regional crypto leaders. Networking lounges and crypto startup booths will facilitate meaningful connections and potential collaborations. Gain practical knowledge to navigate and innovate in the blockchain world."
+    "description": "Dive deep into the decentralized future at the Blockchain & Crypto Meetup..."
   },
   {
     "id": "8",
     "name": "E-commerce Boom Summit",
-    "thumbnail": "https://i.ibb.co.com/sJwj1GhP/img-8.jpg",
+    "thumbnail": "https://i.ibb.co.com/4RNYQ6GN/img-8-min.jpg",
     "category": "Business",
     "date": "2025-12-15",
     "location": "BICC, Dhaka",
     "entry_fee": 350,
-    "description": "The E-commerce Boom Summit is your ultimate guide to thriving in the digital marketplace. This summit brings together online retailers, logistics experts, software developers, and digital marketers to discuss the state of e-commerce in Bangladesh and beyond. Topics include omni-channel selling, mobile commerce, digital payments, customer experience, and logistics innovations. Attendees can participate in product demo zones, network with e-commerce platform providers, and attend sessions led by leading CEOs and e-commerce veterans. Learn how to build, scale, and optimize your online business."
+    "description": "The E-commerce Boom Summit is your ultimate guide to thriving in the digital marketplace..."
   },
   {
     "id": "9",
     "name": "UI/UX Design Conference",
-    "thumbnail": "https://i.ibb.co.com/ycJxhH2b/img-9.png",
+    "thumbnail": "https://i.ibb.co.com/qMNm7VpM/img-9-min.jpg",
     "category": "Design",
     "date": "2026-01-20",
     "location": "Design Hub, Khulna",
     "entry_fee": 250,
-    "description": "Unleash creativity and enhance your design expertise at the UI/UX Design Conference. This gathering features global designers and local talent sharing best practices in user interface and user experience design. Explore sessions on wireframing, usability testing, design psychology, and accessibility. Learn how top companies design for engagement and conversion. Workshops with tools like Figma, Sketch, and Adobe XD will offer practical training for real-world projects. Whether you're a student, freelancer, or professional, this conference will level up your design thinking and technical skills."
-  },
-  {
-    "id": "10",
-    "name": "DevFest Bangladesh",
-    "thumbnail": "https://i.ibb.co.com/HDzpCyHc/img-10.jpg",
-    "category": "Development",
-    "date": "2026-02-14",
-    "location": "North South University, Dhaka",
-    "entry_fee": 400,
-    "description": "Celebrate the spirit of code, collaboration, and community at DevFest Bangladesh, the country’s largest developer-focused gathering. This festival features a mix of technical sessions, open-source showcases, hackathons, and developer meetups. Topics include mobile app development, web technologies, DevOps, cloud computing, and machine learning. Industry leaders and community contributors will share practical insights and hands-on tutorials. With dedicated networking spaces, job fair zones, and mentorship sessions, DevFest is ideal for both beginners and experienced developers looking to connect and grow."
-  },
-  {
-    "id": "11",
-    "name": "Cyber Security Awareness Week",
-    "thumbnail": "https://i.ibb.co.com/PvckFyB7/img-11.jpg",
-    "category": "Security",
-    "date": "2026-03-05",
-    "location": "BUET Auditorium, Dhaka",
-    "entry_fee": 300,
-    "description": "Cyber Security Awareness Week is a vital initiative aimed at educating individuals, organizations, and businesses about the evolving threats in cyberspace. This week-long event features expert talks on cyber resilience, real-world hacking demonstrations, phishing simulations, and best practices for online safety. Attendees will gain knowledge in personal data protection, network security, ethical hacking, and incident response protocols. Tech booths, cybersecurity certification info sessions, and interactive Q&As provide deep insight into staying secure in a digital world. Perfect for IT professionals, students, and anyone wanting to protect themselves in the digital age."
-  },
-  {
-    "id": "12",
-    "name": "Freelancing Bootcamp",
-    "thumbnail": "https://i.ibb.co.com/b5Z7w5Vb/img-12.jpg",
-    "category": "Career",
-    "date": "2026-04-12",
-    "location": "Barisal IT Park",
-    "entry_fee": 100,
-    "description": "Take your first step toward independent earning at the Freelancing Bootcamp. Designed for beginners and aspiring freelancers, this bootcamp covers everything from setting up freelance profiles on platforms like Upwork and Fiverr to creating compelling proposals and managing remote projects efficiently. Industry professionals will offer guidance on client communication, time management, portfolio building, and payment security. Special sessions will focus on in-demand freelance skills such as graphic design, writing, digital marketing, and web development. This is an ideal event for students, part-timers, and anyone interested in earning online."
-  },
-  {
-    "id": "13",
-    "name": "Photography and Film Fest",
-    "thumbnail": "https://i.ibb.co.com/tpZPBHvm/img-13.jpg",
-    "category": "Arts",
-    "date": "2026-05-01",
-    "location": "Chittagong Arts College",
-    "entry_fee": 250,
-    "description": "Celebrate the power of visual storytelling at the Photography and Film Fest. This artistic gathering showcases the creativity of photographers and filmmakers through exhibitions, short film screenings, and multimedia installations. Participate in photography walks, masterclasses on cinematography, editing tutorials, and workshops with DSLR and mobile videography experts. Emerging and professional artists alike can join competitions, panel discussions, and networking mixers. Whether you're behind the lens or in front of the screen, this event offers inspiration and community for all visual storytellers."
-  },
-  {
-    "id": "14",
-    "name": "Healthcare Tech Fair",
-    "thumbnail": "https://i.ibb.co.com/n8tpXqLq/img-14.jpg",
-    "category": "Health",
-    "date": "2026-05-20",
-    "location": "Apollo Convention Center, Dhaka",
-    "entry_fee": 500,
-    "description": "Technology and healthcare converge at the Healthcare Tech Fair, an innovative platform showcasing the future of medical technology. Explore exhibits and live demos of smart diagnostic tools, wearable health monitors, telehealth platforms, robotic surgeries, and AI-driven treatment planning systems. Industry experts, doctors, health-tech entrepreneurs, and policymakers will discuss how digital transformation is reshaping healthcare accessibility, efficiency, and patient outcomes. Perfect for medical professionals, health startup founders, and tech enthusiasts eager to improve healthcare through innovation."
-  },
-  {
-    "id": "15",
-    "name": "Gamers Unite 2026",
-    "thumbnail": "https://i.ibb.co.com/Qv0cGmCs/img-15.jpg",
-    "category": "Gaming",
-    "date": "2026-06-10",
-    "location": "GameZone Arena, Dhaka",
-    "entry_fee": 450,
-    "description": "Step into the thrilling world of competitive gaming at Gamers Unite 2026, Bangladesh’s largest gaming convention. This electrifying event features live tournaments across popular titles, meet-and-greet sessions with renowned streamers, hands-on demos of the latest gaming consoles and gear, and immersive VR/AR experiences. The expo floor includes merchandise stalls, cosplay contests, and indie game showcases. Whether you're a casual gamer, an esports athlete, or a fan of the gaming culture, this is your ultimate destination for fun, competition, and community."
+    "description": "Unleash creativity and enhance your design expertise at the UI/UX Design Conference..."
   }
 ]
