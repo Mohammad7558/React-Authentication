@@ -6,9 +6,9 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="navbar shadow-sm backdrop-blur-2xl">
+    <div className="navbar shadow-sm bg-base-100 sticky top-0 z-10 py-5">
       <div className="flex-1">
-        <Link to='/'><img className="w-44" src={logo} alt="" /></Link>
+        <Link to='/'><img className="w-34" src={logo} alt="" /></Link>
       </div>
       <div className="flex-none lg:hidden">
         <label
@@ -35,7 +35,7 @@ const Header = () => {
       <div className="flex-none hidden lg:flex gap-4">
       <NavLink 
         to="/" 
-        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
+        className={({ isActive }) => isActive ? 'btn btn-primary' : 'btn'}
       >
         Home
       </NavLink>
