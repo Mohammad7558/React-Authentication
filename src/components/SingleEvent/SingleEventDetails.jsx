@@ -1,5 +1,6 @@
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { addEventDataToLocalStorage } from "../../utilities/localStorage";
 
 const SingleEventDetails = ({ snEvent }) => {
   const { name, thumbnail, category, date, location, entry_fee, description } =
@@ -10,11 +11,12 @@ const SingleEventDetails = ({ snEvent }) => {
     const userName = e.target.userName.value;
     const email = e.target.email.value;
     if(userName == '' || email == ''){
-        toast.error('Give the name or email')
+        toast.error('Give the name & email')
     }
     else{
         toast.success(`${name} A seat Booked Successfully`);
         e.target.reset();
+        addEventDataToLocalStorage(snEvent)
     }
   };
 
@@ -27,12 +29,9 @@ const SingleEventDetails = ({ snEvent }) => {
         containerClassName=""
         containerStyle={{}}
         toastOptions={{
-          // Define default options
           className: "",
           duration: 5000,
           removeDelay: 1000,
-
-          // Default options for specific types
           success: {
             duration: 3000,
           },
