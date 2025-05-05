@@ -1,92 +1,92 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Tech Innovators Conference 2025",
     "thumbnail": "https://i.ibb.co.com/F4W1pRyP/img-1.jpg",
     "category": "Technology",
     "date": "2025-05-15",
     "location": "Dhaka Convention Center, Dhaka",
     "entry_fee": 500,
-    "description": "Join the nation's top tech minds at the Tech Innovators Conference 2025, an immersive two-day gathering celebrating innovation and digital transformation..."
+    "description": "Join the nation's top tech minds at the Tech Innovators Conference 2025, an immersive two-day gathering celebrating innovation and digital transformation. The event will feature expert-led sessions on AI, blockchain, cloud computing, and next-gen software development. Attendees will experience product launches, interactive demos, hands-on tech zones, and invaluable networking opportunities with leading engineers, developers, entrepreneurs, and investors. Whether you're a student, tech enthusiast, or business leader, this conference offers actionable insights and inspiration to shape the digital future."
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Digital Marketing Expo 2025",
     "thumbnail": "https://i.ibb.co.com/d48hFzpz/img-2-min.jpg",
     "category": "Marketing",
     "date": "2025-06-10",
     "location": "Bangabandhu Hall, Chattogram",
     "entry_fee": 300,
-    "description": "Stay ahead in the ever-evolving world of digital marketing at the Digital Marketing Expo 2025..."
+    "description": "Stay ahead in the ever-evolving world of digital marketing at the Digital Marketing Expo 2025. This premier event offers workshops and keynote talks from leading marketers, brand strategists, and advertising professionals. Topics include performance marketing, analytics, video storytelling, influencer trends, marketing automation, and AI-driven customer engagement. Ideal for startups, agencies, and freelancers, this expo equips attendees with cutting-edge tools, case studies, and growth frameworks to build and scale digital brands in a competitive landscape."
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "Startup Summit Bangladesh",
     "thumbnail": "https://i.ibb.co.com/G4Z8cQWb/img-3-min.jpg",
     "category": "Entrepreneurship",
     "date": "2025-07-05",
     "location": "Innovation Hub, Dhaka",
     "entry_fee": 700,
-    "description": "The Startup Summit is Bangladesh's premier platform for entrepreneurs to connect, learn, and grow..."
+    "description": "The Startup Summit is Bangladesh's premier platform for entrepreneurs to connect, learn, and grow. This vibrant event will gather founders, VCs, angel investors, and mentors for a full day of actionable learning and business matchmaking. Sessions will include pitch competitions, startup scaling strategies, funding essentials, and growth hacking tactics. With networking lounges and live investor Q&As, attendees will leave equipped with tools to turn ideas into scalable ventures."
   },
   {
-    "id": "4",
+    "id": 4,
     "name": "AI & Machine Learning Fair",
     "thumbnail": "https://i.ibb.co.com/JRpCf6mV/img-4-min.jpg",
     "category": "Artificial Intelligence",
     "date": "2025-08-22",
     "location": "ICT Tower, Dhaka",
     "entry_fee": 600,
-    "description": "Explore the cutting edge of technology at the AI & Machine Learning Fair..."
+    "description": "Explore the cutting edge of technology at the AI & Machine Learning Fair. This forward-focused event showcases state-of-the-art research, real-world applications, and ethical implications of AI. Participants will witness demonstrations in natural language processing, computer vision, robotics, and predictive analytics. The fair also includes AI coding workshops, panels with researchers and data scientists, and a startup zone where AI-driven solutions are launched and evaluated."
   },
   {
-    "id": "5",
+    "id": 5,
     "name": "Green Energy Expo",
     "thumbnail": "https://i.ibb.co.com/1G6vrytm/img-5-min.jpg",
     "category": "Environment",
     "date": "2025-09-18",
     "location": "Sylhet City Center",
     "entry_fee": 200,
-    "description": "Discover the future of sustainability at the Green Energy Expo..."
+    "description": "Discover the future of sustainability at the Green Energy Expo. This event brings together green tech innovators, environmentalists, government bodies, and clean energy startups to discuss and display advancements in renewable energy. Key features include exhibitions on solar and wind power, EV technology, eco-friendly building materials, and smart city planning. Ideal for eco-conscious citizens, policy makers, and students, the expo inspires actionable climate solutions for a sustainable Bangladesh."
   },
   {
-    "id": "6",
+    "id": 6,
     "name": "Women in Tech Conference",
     "thumbnail": "https://i.ibb.co.com/PGMcjKZt/img-6-min.jpg",
     "category": "Diversity",
     "date": "2025-10-10",
     "location": "Rajshahi University Auditorium",
     "entry_fee": 150,
-    "description": "An empowering celebration of women in the tech industry..."
+    "description": "An empowering celebration of women in the tech industry, the Women in Tech Conference brings together female engineers, leaders, educators, and advocates to share insights and ignite change. The event includes leadership panels, mentoring circles, career development workshops, and tech showcases led by trailblazing women. It also highlights gender equity in tech and promotes a more inclusive and diverse digital future. Ideal for students, professionals, and allies committed to diversity in STEM."
   },
   {
-    "id": "7",
+    "id": 7,
     "name": "Blockchain & Crypto Meetup",
     "thumbnail": "https://i.ibb.co.com/BHt2gJrS/img-7-min.jpg",
     "category": "Finance",
     "date": "2025-11-02",
     "location": "Tech Park, Dhaka",
     "entry_fee": 800,
-    "description": "Dive deep into the decentralized future at the Blockchain & Crypto Meetup..."
+    "description": "Dive deep into the decentralized future at the Blockchain & Crypto Meetup. This dynamic gathering covers cryptocurrency trends, blockchain infrastructure, DeFi protocols, NFT ecosystems, and regulatory developments. Participants can attend workshops on building DApps, secure wallet management, and investing safely. Industry pioneers and blockchain developers will share insights on how decentralized technologies are disrupting traditional finance and enabling new business models."
   },
   {
-    "id": "8",
+    "id": 8,
     "name": "E-commerce Boom Summit",
     "thumbnail": "https://i.ibb.co.com/4RNYQ6GN/img-8-min.jpg",
     "category": "Business",
     "date": "2025-12-15",
     "location": "BICC, Dhaka",
     "entry_fee": 350,
-    "description": "The E-commerce Boom Summit is your ultimate guide to thriving in the digital marketplace..."
+    "description": "The E-commerce Boom Summit is your ultimate guide to thriving in the digital marketplace. With talks from top marketplace operators, digital agencies, and logistics partners, the summit covers everything from omnichannel strategies and warehouse automation to mobile-first UX and customer retention. Attendees will explore tools like Shopify, WooCommerce, and local payment gateways while engaging with real-world case studies from Bangladesh’s growing online commerce ecosystem."
   },
   {
-    "id": "9",
+    "id": 9,
     "name": "UI/UX Design Conference",
     "thumbnail": "https://i.ibb.co.com/qMNm7VpM/img-9-min.jpg",
     "category": "Design",
     "date": "2026-01-20",
     "location": "Design Hub, Khulna",
     "entry_fee": 250,
-    "description": "Unleash creativity and enhance your design expertise at the UI/UX Design Conference..."
+    "description": "Unleash creativity and enhance your design expertise at the UI/UX Design Conference. This immersive event features hands-on design sprints, user research labs, and portfolio clinics led by top UI/UX professionals. Explore topics like accessibility, mobile responsiveness, micro-interactions, design thinking, and the psychology behind user behavior. Ideal for designers, developers, and product teams looking to build meaningful, user-first digital experiences."
   }
 ]

@@ -10,7 +10,6 @@ const SingleEvent = ({ singleEvent }) => {
     date,
     location,
     entry_fee,
-    description,
   } = singleEvent;
 
   return (
