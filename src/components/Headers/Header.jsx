@@ -34,12 +34,20 @@ const Header = () => {
         About
       </NavLink>
       {user && (
+        <>
         <NavLink
           className={({ isActive }) => (isActive ? "btn btn-primary" : "btn")}
           to="/profile"
         >
           My Profile
         </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "btn btn-primary" : "btn")}
+          to="/my-bookings"
+        >
+          My Bookings
+        </NavLink>
+        </>
       )}
     </>
   );
@@ -53,7 +61,7 @@ const Header = () => {
       <div className="lg:block hidden">
         {user ? (
           <div className="flex items-center gap-x-4">
-            <img className="w-[54px] rounded-full" src={user?.photoURL} title={user?.displayName} alt="" />
+            <img className="w-[54px] rounded-full" src={user?.photoURL ? user?.photoURL : 'https://fortmyersradon.com/wp-content/uploads/2019/12/dummy-user-img-1.png'} title={user?.displayName} alt="" />
             <button onClick={logOut} className="btn btn-primary">
               Log Out
             </button>

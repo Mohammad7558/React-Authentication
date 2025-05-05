@@ -41,6 +41,10 @@ export const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <PrivateRoutes><MyProfile></MyProfile></PrivateRoutes>
+            },
+            {
+                path: '/my-bookings',
+                element: <h1>My Bookings</h1>
             }
         ]
     }

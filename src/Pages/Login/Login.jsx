@@ -20,6 +20,13 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    if(email == ''){
+      return toast.error('Enter Email')
+    }
+    else if(password == ''){
+      return toast.error('Enter Password')
+    }
+
     signInEmailPassword(email, password)
       .then(() => {
         toast.success("User Login Successfully");

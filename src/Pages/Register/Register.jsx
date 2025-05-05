@@ -28,13 +28,28 @@ const Register = () => {
     const haveUpperCase = /[A-Z]/;
     const haveLowerCase = /[a-z]/;
 
-    if (!haveUpperCase.test(password)) {
-      return setPasswordError("Password Must Have An Uppercase");
-    } else if (!haveLowerCase.test(password)) {
-      return setPasswordError("Password Must Have An Lowercase");
-    } else if (password.length < 6) {
-      setPasswordError("Password should Be 6 Character Long");
-    } 
+    if(userName == ''){
+      return toast.error('Enter Your Name')
+    }
+    else if(photoLink == ''){
+      return toast.error('Enter Your Photo Url')
+    }
+    else if(email == ''){
+      return toast.error('Enter Email')
+    }
+    else if(password == ''){
+      return toast.error('Write A Password')
+    }
+    else if(password.length < 6){
+      return toast.error('Password Must Be 6 Character Long')
+    }
+    else if(!haveLowerCase.test(password)){
+      return toast.error('Password Must Have An Lowercase')
+    }
+    else if(!haveUpperCase.test(password)){
+      return toast.error('Password Must Have An Uppercase')
+    }
+    
     createUserWithEmailPass(email, password)
     .then(result => {
         const user = result.user;
