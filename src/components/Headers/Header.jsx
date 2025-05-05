@@ -1,87 +1,64 @@
-import React, { useContext, useState } from 'react';
-import logo from '../../assets/logo.png';
+import React, { use, useState } from 'react';
+import logo from '../../assets/logo.png'
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../provider/AuthContext';
 import { CiMenuBurger } from 'react-icons/ci';
 import toast from 'react-hot-toast';
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
-  const { user, logOutUser } = useContext(AuthContext);
+  const [open, setOpen] = useState(false)
+  const {user, logOutUser} = use(AuthContext);
 
   const logOut = () => {
     logOutUser()
-      .then(() => {
-        toast.success('User Logged Out');
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
+    .then(() => {
+      toast.success('User Logged Out')
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
 
-  const links = (
-    <>
-      <NavLink className={({ isActive }) => (isActive ? 'btn btn-primary' : 'btn')} to='/'>Home</NavLink>
-      <NavLink className={({ isActive }) => (isActive ? 'btn btn-primary' : 'btn')} to='/about'>About</NavLink>
-      {
-        user && <NavLink className={({ isActive }) => (isActive ? 'btn btn-primary' : 'btn')} to='/profile'>My Profile</NavLink>
-      }
-    </>
-  );
-
-  const avatar = user?.photoURL || 'https://i.ibb.co/4pDNDk1/avatar.png';
-
+  const links = <>
+  <NavLink className={({isActive}) => (isActive ? 'btn btn-primary' : 'btn')} to='/'>Home</NavLink>
+  <NavLink className={({isActive}) => (isActive ? 'btn btn-primary' : 'btn')} to='/about'>About</NavLink>
+  {
+    user && <NavLink className={({isActive}) => (isActive ? 'btn btn-primary' : 'btn')} to='/profile'>My Profile</NavLink>
+  }
+  </>
   return (
     <div className='w-11/12 mx-auto flex justify-between items-center py-5 relative z-10'>
       <div>
-        <img className='w-44' src={logo} alt="Logo" />
+        <img className='w-44' src={logo} alt="" />
       </div>
       <div className='hidden lg:flex gap-x-5'>
         {links}
       </div>
       <div className='lg:block hidden'>
         {
-          user ? (
-            <div className='flex items-center gap-x-4'>
-              <img
-                className='w-[54px] h-[54px] rounded-full object-cover'
-                src={avatar}
-                alt="User Avatar"
-              />
-              <button onClick={logOut} className='btn btn-primary'>Log Out</button>
-            </div>
-          ) : (
-            <Link className='btn' to='/login'>Login</Link>
-          )
+          user ? <div className='flex items-center gap-x-4'>
+            <img className='w-[54px]' src={user?.photoURL} alt="" />
+            <button onClick={logOut} className='btn btn-primary'>Log Out</button>
+          </div> : 
+          <Link className='btn' to='/login'>Login</Link>
         }
       </div>
       <div className='lg:hidden'>
-        <button onClick={() => setOpen(!open)} className='btn btn-circle p-2'>
-          <CiMenuBurger className='text-3xl' />
-        </button>
+      <button onClick={() => setOpen(!open)} className='btn btn-circle p-2'><CiMenuBurger className='text-3xl' /></button>
+      {
+        open && <div className='bg-white border w-full absolute left-0 top-22 text-center'>
+        <ul className='flex flex-col p-5 gap-y-5'>
+          {links}
+        </ul>
         {
-          open && (
-            <div className='bg-white border w-full absolute left-0 top-22 text-center'>
-              <ul className='flex flex-col p-5 gap-y-5'>
-                {links}
-              </ul>
-              {
-                user ? (
-                  <div className='flex items-center justify-center gap-x-4'>
-                    <img
-                      className='w-[54px] h-[54px] rounded-full object-cover'
-                      src={avatar}
-                      alt="User Avatar"
-                    />
-                    <button onClick={logOut} className='btn btn-primary'>Log Out</button>
-                  </div>
-                ) : (
-                  <Link className='btn' to='/login'>Login</Link>
-                )
-              }
-            </div>
-          )
+          user ? <div className='flex items-center justify-center gap-x-4'>
+            <img className='w-[54px]' src={user?.photoURL} alt="" />
+            <button onClick={logOut} className='btn btn-primary'>Log Out</button>
+          </div> : 
+          <Link className='btn' to='/login'>Login</Link>
         }
+      </div> 
+      }
       </div>
     </div>
   );

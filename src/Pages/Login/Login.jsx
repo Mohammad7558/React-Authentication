@@ -22,6 +22,7 @@ const Login = () => {
     signInEmailPassword(email, password)
       .then(() => {
         toast.success("User Login Successfully");
+        e.target.reset();
       })
       .catch((error) => {
         setError(error.message);

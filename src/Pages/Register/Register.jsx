@@ -39,14 +39,16 @@ const Register = () => {
         const user = result.user;
         updateUser({displayName: userName, photoURL: photoLink})
         .then(() => {
-            setUser(user)
+            setUser({...user, displayName: userName, photoURL: photoLink})
         })
         .catch(error => {
             console.log(error);
         })
+        toast.success('User Created Successfully')
+        e.target.reset()
     })
     .catch(error => {
-        console.log(error);
+        toast.error(error.message)
     })
   };
 
