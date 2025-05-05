@@ -1,15 +1,17 @@
 import React, { useContext, useState } from "react";
 import { FaEye, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthContext";
 import toast from "react-hot-toast";
 import { LuEyeClosed } from "react-icons/lu";
 import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
-  const [error, setError] = useState("");
   const { signInEmailPassword, createUserWithGoogle } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
   const provider = new GoogleAuthProvider();
 
@@ -17,15 +19,15 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    setError("");
 
     signInEmailPassword(email, password)
       .then(() => {
         toast.success("User Login Successfully");
+        navigate(from, { replace: true });
         e.target.reset();
       })
       .catch((error) => {
-        setError(error.message);
+        toast.error(error.message)
       });
   };
   
@@ -34,11 +36,13 @@ const Login = () => {
     createUserWithGoogle(provider)
     .then(result => {
         const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
         toast.success('User Log in Successfully')
     })
     .catch(error => {
         console.log(error);
-        setError(error.message)
+        toast.error(error.message)
     })
   }
 
@@ -91,8 +95,6 @@ const Login = () => {
               )}
             </div>
           </div>
-          <p className="text-red-500">{error}</p>
-
           <button type="submit" className="w-full btn btn-primary">
             Login
           </button>
@@ -108,7 +110,7 @@ const Login = () => {
         <div className="mt-4">
           <p className="text-center">
             New Here ?{" "}
-            <Link className="link text-blue-500" to="/register">
+            <Link state={location.state} className="link text-blue-500" to="/register">
               Create An Account
             </Link>
           </p>

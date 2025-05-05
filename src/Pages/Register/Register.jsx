@@ -14,7 +14,8 @@ const Register = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = location.state?.pathname || '/';
+  const from = location.state?.from?.pathname || '/';
+
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -42,9 +43,10 @@ const Register = () => {
             setUser({...user, displayName: userName, photoURL: photoLink})
         })
         .catch(error => {
-            console.log(error);
+            toast.error(error.message)
         })
         toast.success('User Created Successfully')
+        navigate(from, { replace: true });
         e.target.reset()
     })
     .catch(error => {
@@ -57,11 +59,12 @@ const Register = () => {
     .then(result => {
         const user = result.user;
         console.log(user);
-        navigate(from, {replace: true})
+        navigate(from, { replace: true });
         toast.success('User create Successfully')
     })
     .catch(error => {
         console.log(error);
+        toast.error(error.message)
     })
   }
 
