@@ -30,7 +30,7 @@ const slides = [
 
 const HeroSlider = () => {
   return (
-    <section className="relative -mt-18">
+    <section className="relative">
       <Swiper
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         effect="fade"

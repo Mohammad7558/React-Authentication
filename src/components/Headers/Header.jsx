@@ -1,114 +1,88 @@
-import React, { useState } from "react";
-import logo from '../../assets/logo.png'
-import { Link, NavLink } from "react-router";
+import React, { useContext, useState } from 'react';
+import logo from '../../assets/logo.png';
+import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../../provider/AuthContext';
+import { CiMenuBurger } from 'react-icons/ci';
+import toast from 'react-hot-toast';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const { user, logOutUser } = useContext(AuthContext);
+
+  const logOut = () => {
+    logOutUser()
+      .then(() => {
+        toast.success('User Logged Out');
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+  const links = (
+    <>
+      <NavLink className={({ isActive }) => (isActive ? 'btn btn-primary' : 'btn')} to='/'>Home</NavLink>
+      <NavLink className={({ isActive }) => (isActive ? 'btn btn-primary' : 'btn')} to='/about'>About</NavLink>
+      {
+        user && <NavLink className={({ isActive }) => (isActive ? 'btn btn-primary' : 'btn')} to='/profile'>My Profile</NavLink>
+      }
+    </>
+  );
+
+  const avatar = user?.photoURL || 'https://i.ibb.co/4pDNDk1/avatar.png';
 
   return (
-    <div className="navbar shadow-sm bg-base-100 sticky top-0 z-10 py-5">
-      <div className="flex-1">
-        <Link to='/'><img className="w-34" src={logo} alt="" /></Link>
+    <div className='w-11/12 mx-auto flex justify-between items-center py-5 relative z-10'>
+      <div>
+        <img className='w-44' src={logo} alt="Logo" />
       </div>
-      <div className="flex-none lg:hidden">
-        <label
-          tabIndex={0}
-          className="btn btn-ghost btn-circle"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </label>
+      <div className='hidden lg:flex gap-x-5'>
+        {links}
       </div>
-      <div className="flex-none hidden lg:flex gap-4">
-      <NavLink 
-        to="/" 
-        className={({ isActive }) => isActive ? 'btn btn-primary' : 'btn'}
-      >
-        Home
-      </NavLink>
-      <NavLink 
-        to="/about" 
-        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
-      >
-        About
-      </NavLink>
-      <NavLink 
-        to="/photo" 
-        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
-      >
-        Photo
-      </NavLink>
-      <NavLink 
-        to="/video" 
-        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
-      >
-        Video
-      </NavLink>
-        
-        <div className="dropdown dropdown-end">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full">
+      <div className='lg:block hidden'>
+        {
+          user ? (
+            <div className='flex items-center gap-x-4'>
               <img
-                title="name"
+                className='w-[54px] h-[54px] rounded-full object-cover'
+                src={avatar}
                 alt="User Avatar"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
               />
+              <button onClick={logOut} className='btn btn-primary'>Log Out</button>
             </div>
-          </div>
-        </div>
+          ) : (
+            <Link className='btn' to='/login'>Login</Link>
+          )
+        }
       </div>
-      {isMenuOpen && (
-        <div className="absolute top-16 right-0 w-64 bg-base-100 p-4 rounded-lg shadow-md lg:hidden">
-          <a href="#" className="block mb-2">Home</a>
-          <a href="#" className="block mb-2">About</a>
-          <a href="#" className="block mb-2">Services</a>
-          <a href="#" className="block mb-2">Contact</a>
-          <div className="dropdown dropdown-end mt-4">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  alt="User Avatar"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                />
-              </div>
+      <div className='lg:hidden'>
+        <button onClick={() => setOpen(!open)} className='btn btn-circle p-2'>
+          <CiMenuBurger className='text-3xl' />
+        </button>
+        {
+          open && (
+            <div className='bg-white border w-full absolute left-0 top-22 text-center'>
+              <ul className='flex flex-col p-5 gap-y-5'>
+                {links}
+              </ul>
+              {
+                user ? (
+                  <div className='flex items-center justify-center gap-x-4'>
+                    <img
+                      className='w-[54px] h-[54px] rounded-full object-cover'
+                      src={avatar}
+                      alt="User Avatar"
+                    />
+                    <button onClick={logOut} className='btn btn-primary'>Log Out</button>
+                  </div>
+                ) : (
+                  <Link className='btn' to='/login'>Login</Link>
+                )
+              }
             </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li><a>Settings</a></li>
-              <li><a>Logout</a></li>
-            </ul>
-          </div>
-        </div>
-      )}
+          )
+        }
+      </div>
     </div>
   );
 };
