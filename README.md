@@ -1,12 +1,43 @@
-# React + Vite
+# 🎉 Event Master
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Event Master** is a fully responsive event management web application that allows users to explore events, register or log in, and book or remove seats for their desired events. Built with modern technologies, it delivers a smooth user experience across all devices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Features
 
-## Expanding the ESLint configuration
+- 🔐 **Authentication**
+  - User registration and login
+  - Firebase Authentication (Email & Password)
+  - Protected routes for authenticated users
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📅 **Event Management**
+  - View detailed event information
+  - Book or remove event seats
+  - Dynamic event pages with React Router
+
+- 🌐 **Responsive Design**
+  - Mobile-first layout
+  - Tailwind CSS and DaisyUI for styling
+  - Swiper slider for featured content
+
+- 🧠 **Dynamic Page Titles**
+  - Managed with React Helmet
+
+- 🔔 **User Feedback**
+  - Toast notifications with React Hot Toast
+
+---
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
+- [Firebase Auth](https://firebase.google.com/products/auth)
+- [React Hot Toast](https://react-hot-toast.com/)
+- [Swiper.js](https://swiperjs.com/)
+- [React Helmet](https://github.com/nfl/react-helmet)
+
+---
