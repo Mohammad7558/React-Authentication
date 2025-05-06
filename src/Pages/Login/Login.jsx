@@ -9,6 +9,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 const Login = () => {
   const { signInEmailPassword, createUserWithGoogle } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
@@ -38,7 +39,6 @@ const Login = () => {
       });
   };
   
-
   const signInUser = () => {
     createUserWithGoogle(provider)
     .then(result => {
@@ -71,6 +71,7 @@ const Login = () => {
               className="input w-full rounded-md mb-2"
               placeholder="Enter your email"
               name="email"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
@@ -100,6 +101,9 @@ const Login = () => {
                   className="absolute top-3 right-4 z-10 cursor-pointer"
                 />
               )}
+              <div className="text-right">
+              <Link className="link text-blue-400 text-sm" state={{email}} to='/forgetPassword'>Forget Password ?</Link>
+              </div>
             </div>
           </div>
           <button type="submit" className="w-full btn btn-primary">

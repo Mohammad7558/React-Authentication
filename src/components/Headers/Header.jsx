@@ -56,35 +56,41 @@ const Header = () => {
     <div className="w-full mx-auto z-10 border-b border-gray-400">
       <div className="flex w-11/12 mx-auto justify-between items-center py-5 relative">
         <div>
-          <img className="w-44" src={logo} alt="Logo" />
+          <Link to="/">
+            <img className="w-44" src={logo} alt="Logo" />
+          </Link>
         </div>
 
         <div className="hidden lg:flex gap-x-5">{links}</div>
 
         <div className="lg:block hidden">
-          {user ? (
-            <div className="flex items-center gap-x-4">
-              <div className="tooltip tooltip-left" data-tip={user?.displayName || "User"}>
-                <img
-                  className="w-[54px] rounded-full border border-gray-300"
-                  src={
-                    user?.photoURL
-                      ? user?.photoURL
-                      : "https://fortmyersradon.com/wp-content/uploads/2019/12/dummy-user-img-1.png"
-                  }
-                  alt="User"
-                />
-              </div>
+          <div className="flex items-center gap-x-4">
+            <div
+              className="tooltip tooltip-left"
+              data-tip={user?.displayName || "User"}
+            >
+              <img
+                className="w-[54px] rounded-full border border-gray-300"
+                src={
+                  user?.photoURL
+                    ? user.photoURL
+                    : "https://toppng.com//public/uploads/preview/donna-picarro-dummy-avatar-115633298255iautrofxa.png"
+                }
+                alt="User"
+              />
+            </div>
+            {user ? (
               <button onClick={logOut} className="btn btn-primary">
                 Log Out
               </button>
-            </div>
-          ) : (
-            <Link className="btn" to="/login">
-              Login
-            </Link>
-          )}
+            ) : (
+              <Link className="btn" to="/login">
+                Login
+              </Link>
+            )}
+          </div>
         </div>
+
         <div className="lg:hidden">
           <button onClick={() => setOpen(!open)} className="btn btn-circle p-2">
             <CiMenuBurger className="text-3xl" />
@@ -92,28 +98,31 @@ const Header = () => {
           {open && (
             <div className="bg-white border w-full absolute left-0 top-22 text-center shadow-md z-50">
               <ul className="flex flex-col p-5 gap-y-5">{links}</ul>
-              {user ? (
-                <div className="flex items-center justify-center gap-x-4 pb-4">
-                  <div className="tooltip tooltip-top" data-tip={user?.displayName || "User"}>
-                    <img
-                      className="w-[54px] rounded-full border border-gray-300"
-                      src={
-                        user?.photoURL
-                          ? user?.photoURL
-                          : "https://fortmyersradon.com/wp-content/uploads/2019/12/dummy-user-img-1.png"
-                      }
-                      alt="User"
-                    />
-                  </div>
+              <div className="flex items-center justify-center gap-x-4 pb-4">
+                <div
+                  className="tooltip tooltip-top"
+                  data-tip={user?.displayName || "User"}
+                >
+                  <img
+                    className="w-[54px] rounded-full border border-gray-300"
+                    src={
+                      user?.photoURL
+                        ? user.photoURL
+                        : "https://toppng.com//public/uploads/preview/donna-picarro-dummy-avatar-115633298255iautrofxa.png"
+                    }
+                    alt="User"
+                  />
+                </div>
+                {user ? (
                   <button onClick={logOut} className="btn btn-primary">
                     Log Out
                   </button>
-                </div>
-              ) : (
-                <Link className="btn mb-4" to="/login">
-                  Login
-                </Link>
-              )}
+                ) : (
+                  <Link className="btn mb-4" to="/login">
+                    Login
+                  </Link>
+                )}
+              </div>
             </div>
           )}
         </div>

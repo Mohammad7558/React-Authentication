@@ -3,6 +3,7 @@ import { AuthContext } from "./AuthContext";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -48,6 +49,11 @@ const AuthProvider = ({ children }) => {
     return updateProfile(auth.currentUser, userData)
   } 
 
+  const forgetPassword = (email) => {
+    setLoading(false)
+    return sendPasswordResetEmail(auth, email)
+  }
+
   const userInfo = {
     user,
     setUser,
@@ -56,7 +62,8 @@ const AuthProvider = ({ children }) => {
     createUserWithGoogle,
     createUserWithEmailPass,
     signInEmailPassword,
-    updateUser
+    updateUser,
+    forgetPassword
   };
 
   return (

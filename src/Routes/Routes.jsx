@@ -12,6 +12,7 @@ import MyProfile from "../components/MyProfile/MyProfile";
 import MyBooking from "../components/My-Booking/MyBooking";
 import TermsAndConditions from "../Pages/Terms&Conditions/TermsAndConditions";
 import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
+import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 
 export const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
             {
                 path: '/policy',
                 Component: PrivacyPolicy
+            },
+            {
+                path: '/forgetPassword',
+                Component: ForgetPassword
             }
         ]
     }
