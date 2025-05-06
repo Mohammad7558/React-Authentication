@@ -1,32 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { getEventDataFromLocalStorage } from "../../utilities/localStorage";
+import {
+  getEventDataFromLocalStorage,
+  removeDoctorFromLocalStorage,
+} from "../../utilities/localStorage";
+import DetailsBooking from "./DetailsBooking";
+import toast from "react-hot-toast";
+import NoBookedShow from "../NoBookedShow/NoBookedShow";
 
 const MyBooking = () => {
   const [bookedEvent, setBookedEvent] = useState([]);
+
+  const handleRemove = (id) => {
+    const filteredEvent = bookedEvent.filter((event) => event.id !== id);
+    setBookedEvent(filteredEvent);
+    removeDoctorFromLocalStorage(id);
+    toast.success("Removed Successfully");
+  };
 
   useEffect(() => {
     const eventData = getEventDataFromLocalStorage();
     setBookedEvent(eventData);
   }, []);
 
-  console.log(bookedEvent);
-
   return (
     <div>
-      <h2>My Booked Events</h2>
-      {bookedEvent.length > 0 ? (
-        <ul>
-          {bookedEvent.map((event, index) => (
-            <li key={index} className="mb-4">
-              <h3 className="text-xl font-semibold">{event.name}</h3>
-              <p>{event.description}</p>
-              <p><strong>Venue:</strong> {event.venue}</p>
-              <p><strong>Date:</strong> {event.date}</p>
-            </li>
-          ))}
-        </ul>
+      {bookedEvent.length === 0 ? (
+        <NoBookedShow/>
       ) : (
-        <p>No events booked yet.</p>
+        <>
+          <h2 className="text-center text-4xl mt-10">My Booked Events</h2>
+          {bookedEvent.map((event) => (
+            <DetailsBooking
+              key={event.id}
+              event={event}
+              handleRemove={handleRemove}
+            ></DetailsBooking>
+          ))}
+        </>
       )}
     </div>
   );

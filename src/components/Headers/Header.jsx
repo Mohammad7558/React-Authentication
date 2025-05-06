@@ -35,65 +35,88 @@ const Header = () => {
       </NavLink>
       {user && (
         <>
-        <NavLink
-          className={({ isActive }) => (isActive ? "btn btn-primary" : "btn")}
-          to="/profile"
-        >
-          My Profile
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? "btn btn-primary" : "btn")}
-          to="/my-bookings"
-        >
-          My Bookings
-        </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "btn btn-primary" : "btn")}
+            to="/profile"
+          >
+            My Profile
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "btn btn-primary" : "btn")}
+            to="/my-bookings"
+          >
+            My Bookings
+          </NavLink>
         </>
       )}
     </>
   );
+
   return (
-    <div className="w-full mx-auto shadow z-10">
+    <div className="w-full mx-auto z-10 border-b border-gray-400">
       <div className="flex w-11/12 mx-auto justify-between items-center py-5 relative">
-      <div>
-        <img className="w-44" src={logo} alt="" />
-      </div>
-      <div className="hidden lg:flex gap-x-5">{links}</div>
-      <div className="lg:block hidden">
-        {user ? (
-          <div className="flex items-center gap-x-4">
-            <img className="w-[54px] rounded-full" src={user?.photoURL ? user?.photoURL : 'https://fortmyersradon.com/wp-content/uploads/2019/12/dummy-user-img-1.png'} title={user?.displayName} alt="" />
-            <button onClick={logOut} className="btn btn-primary">
-              Log Out
-            </button>
-          </div>
-        ) : (
-          <Link className="btn" to="/login">
-            Login
-          </Link>
-        )}
-      </div>
-      <div className="lg:hidden">
-        <button onClick={() => setOpen(!open)} className="btn btn-circle p-2">
-          <CiMenuBurger className="text-3xl" />
-        </button>
-        {open && (
-          <div className="bg-white border w-full absolute left-0 top-22 text-center">
-            <ul className="flex flex-col p-5 gap-y-5">{links}</ul>
-            {user ? (
-              <div className="flex items-center justify-center gap-x-4">
-                <img className="w-[54px] rounded-full" src={user?.photoURL} title={user?.displayName} alt="" />
-                <button onClick={logOut} className="btn btn-primary">
-                  Log Out
-                </button>
+        <div>
+          <img className="w-44" src={logo} alt="Logo" />
+        </div>
+
+        <div className="hidden lg:flex gap-x-5">{links}</div>
+
+        <div className="lg:block hidden">
+          {user ? (
+            <div className="flex items-center gap-x-4">
+              <div className="tooltip tooltip-left" data-tip={user?.displayName || "User"}>
+                <img
+                  className="w-[54px] rounded-full border border-gray-300"
+                  src={
+                    user?.photoURL
+                      ? user?.photoURL
+                      : "https://fortmyersradon.com/wp-content/uploads/2019/12/dummy-user-img-1.png"
+                  }
+                  alt="User"
+                />
               </div>
-            ) : (
-              <Link className="btn" to="/login">
-                Login
-              </Link>
-            )}
-          </div>
-        )}
-      </div>
+              <button onClick={logOut} className="btn btn-primary">
+                Log Out
+              </button>
+            </div>
+          ) : (
+            <Link className="btn" to="/login">
+              Login
+            </Link>
+          )}
+        </div>
+        <div className="lg:hidden">
+          <button onClick={() => setOpen(!open)} className="btn btn-circle p-2">
+            <CiMenuBurger className="text-3xl" />
+          </button>
+          {open && (
+            <div className="bg-white border w-full absolute left-0 top-22 text-center shadow-md z-50">
+              <ul className="flex flex-col p-5 gap-y-5">{links}</ul>
+              {user ? (
+                <div className="flex items-center justify-center gap-x-4 pb-4">
+                  <div className="tooltip tooltip-top" data-tip={user?.displayName || "User"}>
+                    <img
+                      className="w-[54px] rounded-full border border-gray-300"
+                      src={
+                        user?.photoURL
+                          ? user?.photoURL
+                          : "https://fortmyersradon.com/wp-content/uploads/2019/12/dummy-user-img-1.png"
+                      }
+                      alt="User"
+                    />
+                  </div>
+                  <button onClick={logOut} className="btn btn-primary">
+                    Log Out
+                  </button>
+                </div>
+              ) : (
+                <Link className="btn mb-4" to="/login">
+                  Login
+                </Link>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

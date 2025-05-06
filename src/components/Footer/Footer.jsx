@@ -17,22 +17,20 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-bold mb-4">Quick Links</h2>
             <ul>
-              <li><a href="/terms" className="text-primary hover:underline">Terms & Conditions</a></li>
-              <li><a href="/privacy" className="text-primary hover:underline">Privacy Policy</a></li>
-              <li><a href="/faq" className="text-primary hover:underline">FAQ</a></li>
-              <li><a href="/contact" className="text-primary hover:underline">Contact Us</a></li>
+              <li><Link to='/terms' className="text-primary hover:underline">Terms & Conditions</Link></li>
+              <li><Link to='/policy' className="text-primary hover:underline">Privacy Policy</Link></li>
             </ul>
           </div>
           <div>
             <h2 className="text-xl font-bold mb-4">Follow Us</h2>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="btn btn-circle btn-ghost">
+              <a href="https://facebook.com" target='_blank' className="btn btn-circle btn-ghost">
                 <FaFacebookF className="h-6 w-6" />
               </a>
-              <a href="https://twitter.com" className="btn btn-circle btn-ghost">
+              <a href="https://twitter.com" target='_blank' className="btn btn-circle btn-ghost">
                 <FaTwitter className="h-6 w-6" />
               </a>
-              <a href="https://linkedin.com" className="btn btn-circle btn-ghost">
+              <a href="https://linkedin.com" target='_blank' className="btn btn-circle btn-ghost">
                 <FaLinkedinIn className="h-6 w-6" />
               </a>
             </div>

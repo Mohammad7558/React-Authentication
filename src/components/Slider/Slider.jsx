@@ -47,9 +47,7 @@ const HeroSlider = () => {
               className="w-full h-full bg-cover bg-center relative"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              {/* Overlay */}
               <div className="absolute inset-0 bg-[#0000007b] bg-opacity-20 flex items-center justify-center">
-                {/* Content */}
                 <div className="text-center px-4 text-white max-w-2xl">
                   <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-md">
                     {slide.title}

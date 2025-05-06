@@ -10,6 +10,8 @@ import About from "../Pages/About/About";
 import PrivateRoutes from "./PrivateRoutes";
 import MyProfile from "../components/MyProfile/MyProfile";
 import MyBooking from "../components/My-Booking/MyBooking";
+import TermsAndConditions from "../Pages/Terms&Conditions/TermsAndConditions";
+import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
 
 export const router = createBrowserRouter([
     {
@@ -46,6 +48,14 @@ export const router = createBrowserRouter([
             {
                 path: '/my-bookings',
                 element: <PrivateRoutes><MyBooking/></PrivateRoutes>
+            },
+            {
+                path: '/terms',
+                Component: TermsAndConditions
+            },
+            {
+                path: '/policy',
+                Component: PrivacyPolicy
             }
         ]
     }
