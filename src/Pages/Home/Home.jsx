@@ -3,6 +3,7 @@ import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import Service from "../../components/Service/Service";
 import Slider from "../../components/Slider/Slider";
 import UpcomingEvents from "../../components/UpcomingEvents/UpcomingEvents";
+import Review from "../../components/Review/Review";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <UpcomingEvents />
       <WhyChooseUs />
       <Service />
+      <Review/>
     </div>
   );
 };
