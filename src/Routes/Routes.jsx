@@ -17,12 +17,12 @@ import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 export const router = createBrowserRouter([
     {
         path: '/',
-        Component: Root,
+        element: <Root/>,
         errorElement: <Error/>,
         children: [
             {
                 path: '/',
-                Component: Home
+                element: <Home/>
             },
             {
                 path: '/events/:id',
@@ -32,15 +32,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                Component: Login
+                element: <Login/>
             },
             {
                 path: '/register',
-                Component: Register
+                element: <Register/>
             },
             {
                 path: '/about',
-                Component: About
+                element: <About/>
             },
             {
                 path: '/profile',
@@ -52,15 +52,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/terms',
-                Component: TermsAndConditions
+                element: <TermsAndConditions/>
             },
             {
                 path: '/policy',
-                Component: PrivacyPolicy
+                element: <PrivacyPolicy/>
             },
             {
                 path: '/forgetPassword',
-                Component: ForgetPassword
+                element: <ForgetPassword/>
             }
         ]
     }

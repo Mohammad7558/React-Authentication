@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router';
 
 const PrivacyPolicy = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if(location.pathname === '/policy'){
+      window.document.title = 'policy - Event Master'
+    }
+  }, [location.pathname])
+
     return (
         <div className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
           <div className="absolute w-[500px] h-[500px] bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse top-[-100px] left-[-100px]"></div>

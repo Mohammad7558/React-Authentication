@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaEye, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate} from "react-router";
 import { AuthContext } from "../../provider/AuthContext";
 import { LuEyeClosed } from "react-icons/lu";
 import { GoogleAuthProvider } from "firebase/auth";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [passwordError, setPasswordError] = useState("");
@@ -83,13 +84,17 @@ const Register = () => {
     })
   }
 
+  useEffect(() => {
+      if(location.pathname === '/register'){
+        window.document.title = 'Register - Event Master'
+      }
+    }, [location.pathname])
+
   return (
     <div className="relative bg-gray-100 py-20 px-10 overflow-hidden min-h-screen flex items-center justify-center">
-      {/* Glowing Background Blobs */}
       <div className="absolute -top-32 -left-32 w-[700px] h-[700px] bg-gradient-to-r from-purple-200 via-pink-200 to-yellow-200 opacity-30 blur-3xl animate-pulse rounded-full z-0"></div>
       <div className="absolute -bottom-32 -right-32 w-[700px] h-[700px] bg-gradient-to-r from-yellow-200 via-green-200 to-blue-200 opacity-30 blur-3xl animate-pulse rounded-full z-0"></div>
 
-      {/* Register Card */}
       <div className="relative z-10 w-full lg:w-1/3 bg-white p-10 shadow-md rounded-xl">
         <h2 className="text-2xl font-semibold text-center mb-5">Register</h2>
         <form onSubmit={handleRegister} className="space-y-4">

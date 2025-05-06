@@ -1,6 +1,8 @@
-import React, { use } from 'react';
+import React, { use, useEffect } from 'react';
 import { AuthContext } from '../../provider/AuthContext';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router';
 
 const MyProfile = () => {
     const { user, setUser, updateUser } = use(AuthContext);
@@ -25,6 +27,14 @@ const MyProfile = () => {
                 toast.error(error.message);
             });
     };
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if(location.pathname === '/profile'){
+          window.document.title = 'My Profile - Event Master'
+        }
+      }, [location.pathname])
 
     return (
         <div className="relative flex justify-center items-center min-h-screen bg-gradient-to-br from-white to-blue-50 overflow-hidden">

@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaUsers, FaCalendarCheck, FaRocket } from "react-icons/fa";
+import { useLocation } from "react-router";
 
 const About = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if(location.pathname === '/about'){
+      window.document.title = 'About - Event Master'
+    }
+  }, [location.pathname])
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-white text-gray-800">
       <div className="absolute inset-0 z-0">

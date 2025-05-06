@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaEye, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthContext";
 import toast from "react-hot-toast";
 import { LuEyeClosed } from "react-icons/lu";
 import { GoogleAuthProvider } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signInEmailPassword, createUserWithGoogle } = useContext(AuthContext);
@@ -51,6 +52,12 @@ const Login = () => {
         toast.error(error.message);
       });
   };
+
+  useEffect(() => {
+    if(location.pathname === '/login'){
+      window.document.title = 'Login - Event Master'
+    }
+  }, [location.pathname])
 
   return (
     <div className="relative bg-gray-100 py-20 px-10 overflow-hidden min-h-screen flex items-center justify-center">

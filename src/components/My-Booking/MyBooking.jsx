@@ -6,9 +6,11 @@ import {
 import DetailsBooking from "./DetailsBooking";
 import toast from "react-hot-toast";
 import NoBookedShow from "../NoBookedShow/NoBookedShow";
+import { useLocation } from "react-router";
 
 const MyBooking = () => {
   const [bookedEvent, setBookedEvent] = useState([]);
+  const location = useLocation();
 
   const handleRemove = (id) => {
     const filteredEvent = bookedEvent.filter((event) => event.id !== id);
@@ -22,7 +24,14 @@ const MyBooking = () => {
     setBookedEvent(eventData);
   }, []);
 
+  useEffect(() => {
+    if(location.pathname === '/my-bookings'){
+      window.document.title = 'My Booking - Event Master'
+    }
+  }, [location.pathname])
+
   return (
+    <>
     <div>
       {bookedEvent.length === 0 ? (
         <NoBookedShow/>
@@ -39,6 +48,7 @@ const MyBooking = () => {
         </>
       )}
     </div>
+    </>
   );
 };
 

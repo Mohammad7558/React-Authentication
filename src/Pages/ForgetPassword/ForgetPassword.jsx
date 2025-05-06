@@ -1,14 +1,14 @@
-import React, { useContext, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router';
+import React, { useContext, useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
 import { AuthContext } from '../../provider/AuthContext';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet-async';
 
 const ForgetPassword = () => {
   const location = useLocation();
   const initialEmail = location?.state?.email || '';
   const [email, setEmail] = useState(initialEmail);
   const { forgetPassword } = useContext(AuthContext);
-  const navigate = useNavigate();
 
 
   const handleForget = (e) => {
@@ -20,15 +20,22 @@ const ForgetPassword = () => {
       .then(() => {
         setEmail('')
         toast.success('Password reset email sent');
-        navigate('/login')
+        window.location.href = 'https://mail.google.com'
       })
       .catch((error) => {
         toast.error(error.message);
       });
   };
 
+  useEffect(() => {
+        if(location.pathname === '/forgetPassword'){
+          window.document.title = 'Forget Password - Event Master'
+        }
+      }, [location.pathname])
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-100 to-white relative overflow-hidden">
+      <Helmet><title>Event Master - Forgat-password</title></Helmet>
       <div className="absolute w-[500px] h-[500px] bg-blue-300 blur-[250px] rounded-full opacity-30 animate-pulse"></div>
 
       <div className="bg-white shadow-xl rounded-2xl p-10 z-10 w-full max-w-md border border-blue-100">
