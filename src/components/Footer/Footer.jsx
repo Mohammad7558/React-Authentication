@@ -24,13 +24,13 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-bold mb-4">Follow Us</h2>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target='_blank' className="btn btn-circle btn-ghost">
+              <a href="https://www.facebook.com/imMOHAMMOD/" target='_blank' className="btn btn-circle btn-ghost">
                 <FaFacebookF className="h-6 w-6" />
               </a>
-              <a href="https://twitter.com" target='_blank' className="btn btn-circle btn-ghost">
+              <a href="https://x.com/iam_MOHAMMOD" target='_blank' className="btn btn-circle btn-ghost">
                 <FaTwitter className="h-6 w-6" />
               </a>
-              <a href="https://linkedin.com" target='_blank' className="btn btn-circle btn-ghost">
+              <a href="https://www.linkedin.com/in/mohammod-bin-amin-b051a0244/" target='_blank' className="btn btn-circle btn-ghost">
                 <FaLinkedinIn className="h-6 w-6" />
               </a>
             </div>
