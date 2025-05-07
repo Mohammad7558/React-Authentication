@@ -42,7 +42,7 @@ const TermsAndConditions = () => {
           <h2>4. Contact</h2>
           <p>
             If you have any questions about these terms, feel free to contact
-            us at support@example.com.
+            us at hafezmohammod0011@gmail.com
           </p>
         </div>
       </div>
