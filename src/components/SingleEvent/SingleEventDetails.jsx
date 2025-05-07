@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { addEventDataToLocalStorage } from "../../utilities/localStorage";
-import { useLocation, useParams } from "react-router";
+import { useLocation, useNavigate, useParams } from "react-router";
 
 const SingleEventDetails = ({ snEvent }) => {
   const { name, thumbnail, category, date, location, entry_fee, description } =
     snEvent;
 
     const locations = useLocation();
+    const navigate = useNavigate();
     const {id} = useParams();
 
   const handleBook = (e) => {
@@ -19,6 +20,7 @@ const SingleEventDetails = ({ snEvent }) => {
     } else {
       toast.success(`${name} seat booked successfully!`);
       e.target.reset();
+      navigate('/my-bookings')
       addEventDataToLocalStorage(snEvent);
     }
   };
