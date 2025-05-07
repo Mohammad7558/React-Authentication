@@ -12,7 +12,7 @@ const TermsAndConditions = () => {
   }, [location.pathname])
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+    <div className="relative min-h-screen p-5 flex items-center justify-center bg-white overflow-hidden">
       <div className="absolute w-[500px] h-[500px] bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse top-[-100px] left-[-100px]"></div>
       <div className="absolute w-[400px] h-[400px] bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse bottom-[-100px] right-[-100px]"></div>
       <div className="z-10 w-full max-w-3xl p-8 rounded-2xl shadow-2xl bg-base-100 backdrop-blur-md bg-opacity-90 border border-gray-200">
