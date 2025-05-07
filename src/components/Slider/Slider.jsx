@@ -38,7 +38,7 @@ const HeroSlider = () => {
         speed={800}
         pagination={{ clickable: true }}
         navigation={true}
-        className="w-full h-[90vh]"
+        className="w-full h-[60vh] lg:h-[90vh]"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
