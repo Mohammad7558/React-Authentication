@@ -35,7 +35,6 @@ const ForgetPassword = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-100 to-white relative overflow-hidden">
-      <Helmet><title>Event Master - Forgat-password</title></Helmet>
       <div className="absolute w-[500px] h-[500px] bg-blue-300 blur-[250px] rounded-full opacity-30 animate-pulse"></div>
 
       <div className="bg-white shadow-xl rounded-2xl p-10 z-10 w-full max-w-md border border-blue-100">

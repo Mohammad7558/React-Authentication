@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { addEventDataToLocalStorage } from "../../utilities/localStorage";
+import { useLocation, useParams } from "react-router";
 
 const SingleEventDetails = ({ snEvent }) => {
   const { name, thumbnail, category, date, location, entry_fee, description } =
     snEvent;
+
+    const locations = useLocation();
+    const {id} = useParams();
 
   const handleBook = (e) => {
     e.preventDefault();
@@ -18,6 +22,13 @@ const SingleEventDetails = ({ snEvent }) => {
       addEventDataToLocalStorage(snEvent);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    if(locations.pathname === `/events/${id}`){
+      window.document.title =  `Event - ${name} - Event Master`
+    }
+  }, [locations.pathname, id, name])
 
   return (
     <>
