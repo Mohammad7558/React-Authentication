@@ -60,17 +60,53 @@ const Header = () => {
             <img className="w-44" src={logo} alt="Logo" />
           </Link>
         </div>
-
         <div className="hidden lg:flex gap-x-5">{links}</div>
-
-        <div className="lg:block hidden">
-          <div className="flex items-center gap-x-4">
+        <div className="hidden lg:flex items-center gap-x-4">
+          <div
+            className="tooltip tooltip-left"
+            data-tip={user?.displayName || "User"}
+          >
+            <img
+              className="w-[54px] rounded-full border border-gray-300"
+              src={
+                user?.photoURL
+                  ? user.photoURL
+                  : "https://toppng.com//public/uploads/preview/donna-picarro-dummy-avatar-115633298255iautrofxa.png"
+              }
+              alt="User"
+            />
+          </div>
+          {user ? (
+            <button onClick={logOut} className="btn btn-primary">
+              Log Out
+            </button>
+          ) : (
+            <Link className="btn" to="/login">
+              Login
+            </Link>
+          )}
+        </div>
+        <div className="lg:hidden">
+          <button
+            onClick={() => setOpen(!open)}
+            className="btn btn-circle p-2 border-none hover:bg-indigo-500 hover:text-white transition-all duration-300"
+          >
+            <CiMenuBurger className="text-3xl" />
+          </button>
+        </div>
+      </div>
+      {open && (
+        <div className="bg-white border w-full absolute left-0 top-24 text-center shadow-md z-50 rounded-lg">
+          <ul className="flex flex-col p-5 gap-y-5">
+            {links}
+          </ul>
+          <div className="flex flex-col items-center pb-4">
             <div
-              className="tooltip tooltip-left"
+              className="tooltip tooltip-top"
               data-tip={user?.displayName || "User"}
             >
               <img
-                className="w-[54px] rounded-full border border-gray-300"
+                className="w-[54px] rounded-full border border-gray-300 mb-2"
                 src={
                   user?.photoURL
                     ? user.photoURL
@@ -80,53 +116,17 @@ const Header = () => {
               />
             </div>
             {user ? (
-              <button onClick={logOut} className="btn btn-primary">
+              <button onClick={logOut} className="btn btn-primary w-full mb-4">
                 Log Out
               </button>
             ) : (
-              <Link className="btn" to="/login">
+              <Link className="btn w-full mb-4" to="/login">
                 Login
               </Link>
             )}
           </div>
         </div>
-
-        <div className="lg:hidden">
-          <button onClick={() => setOpen(!open)} className="btn btn-circle p-2">
-            <CiMenuBurger className="text-3xl" />
-          </button>
-          {open && (
-            <div className="bg-white border w-full absolute left-0 top-22 text-center shadow-md z-50">
-              <ul className="flex flex-col p-5 gap-y-5">{links}</ul>
-              <div className="flex items-center justify-center gap-x-4 pb-4">
-                <div
-                  className="tooltip tooltip-top"
-                  data-tip={user?.displayName || "User"}
-                >
-                  <img
-                    className="w-[54px] rounded-full border border-gray-300"
-                    src={
-                      user?.photoURL
-                        ? user.photoURL
-                        : "https://toppng.com//public/uploads/preview/donna-picarro-dummy-avatar-115633298255iautrofxa.png"
-                    }
-                    alt="User"
-                  />
-                </div>
-                {user ? (
-                  <button onClick={logOut} className="btn btn-primary">
-                    Log Out
-                  </button>
-                ) : (
-                  <Link className="btn mb-4" to="/login">
-                    Login
-                  </Link>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
+      )}
     </div>
   );
 };
