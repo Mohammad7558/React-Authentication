@@ -1,7 +1,9 @@
 import React from "react";
+import { FaTrashAlt } from "react-icons/fa";
 
 const DetailsBooking = ({ event, handleRemove }) => {
   const {
+    id,
     name,
     thumbnail,
     category,
@@ -12,32 +14,43 @@ const DetailsBooking = ({ event, handleRemove }) => {
   } = event;
 
   return (
-    <div className="w-full m-10 p-5 lg:w-11/12 mx-auto">
-      <div className="border rounded-2xl p-10">
-        <div className="flex flex-col lg:flex-row items-center gap-x-5">
-          <div className="w-full lg:w-1/2">
-            <img className="rounded-4xl" src={thumbnail} alt="" />
+    <div className="w-full px-4 py-6">
+      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg hover:shadow-xl transition duration-300">
+        <div className="flex flex-col lg:flex-row gap-8 p-6 lg:p-10 h-full">
+          <div className="lg:w-1/2 w-full h-full">
+            <img
+              src={thumbnail}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl shadow-md hover:scale-[1.01] transition duration-300"
+              style={{ minHeight: "100%", maxHeight: "400px" }}
+            />
           </div>
-          <div className="w-full lg:w-1/2 lg:mt-0 mt-5">
-            <h1 className="text-4xl mb-3">{name}</h1>
-            <h1 className="mb-4">{description}</h1>
-            <h1>
-              <span className="font-bold">Category:</span> {category}
-            </h1>
-            <h1>
-              <span className="font-bold">Date:</span> {date}
-            </h1>
-            <h1>
-              <span className="font-bold">Location:</span> {eventLocation}
-            </h1>
-            <h1>
-              <span className="font-bold">Entry Fee:</span> {entry_fee} TK
-            </h1>
+
+          <div className="lg:w-1/2 w-full flex flex-col justify-between">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-800 mb-2">{name}</h2>
+              <p className="text-gray-600 mb-4">{description}</p>
+              <div className="flex flex-wrap gap-3 text-sm mb-4">
+                <span className="bg-gray-100 px-3 py-1 rounded-full text-gray-700 shadow-sm">
+                  📁 {category}
+                </span>
+                <span className="bg-gray-100 px-3 py-1 rounded-full text-gray-700 shadow-sm">
+                  📅 {date}
+                </span>
+                <span className="bg-gray-100 px-3 py-1 rounded-full text-gray-700 shadow-sm">
+                  📍 {eventLocation}
+                </span>
+                <span className="bg-gray-100 px-3 py-1 rounded-full text-gray-700 shadow-sm">
+                  🎟️ {entry_fee} TK
+                </span>
+              </div>
+            </div>
+
             <button
-              onClick={() => handleRemove(event.id)}
-              className="btn bg-red-500 text-white mt-4"
+              onClick={() => handleRemove(id)}
+              className="btn bg-red-500 hover:bg-red-600 text-white mt-4 w-fit flex items-center gap-2 transition-transform duration-200 hover:scale-105"
             >
-              Remove Booked Event
+              <FaTrashAlt /> Remove Booking
             </button>
           </div>
         </div>

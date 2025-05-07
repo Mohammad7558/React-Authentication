@@ -10,75 +10,63 @@ const SingleEventDetails = ({ snEvent }) => {
     e.preventDefault();
     const userName = e.target.userName.value;
     const email = e.target.email.value;
-    if(userName == '' || email == ''){
-        toast.error('Give the name & email')
-    }
-    else{
-        toast.success(`${name} A seat Booked Successfully`);
-        e.target.reset();
-        addEventDataToLocalStorage(snEvent)
+    if (userName === "" || email === "") {
+      toast.error("Please enter both name and email.");
+    } else {
+      toast.success(`${name} seat booked successfully!`);
+      e.target.reset();
+      addEventDataToLocalStorage(snEvent);
     }
   };
 
   return (
     <>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-        gutter={8}
-        containerClassName=""
-        containerStyle={{}}
-        toastOptions={{
-          className: "",
-          duration: 5000,
-          removeDelay: 1000,
-          success: {
-            duration: 3000,
-          },
-        }}
-      />
-      <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-start lg:gap-x-10 my-20 p-10">
-        <div className="lg:w-1/2 w-full">
-          <img src={thumbnail} alt="" />
+      <Toaster position="top-center" reverseOrder={false} />
+      
+      <div className="flex flex-col lg:flex-row gap-10 my-20 px-5 lg:px-20">
+        <div className="lg:w-1/2">
+          <img
+            src={thumbnail}
+            alt={name}
+            className="rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
+          />
         </div>
-        <div className="lg:w-1/2 w-full mt-5 lg:mt-0">
-          <h1 className="font-normal text-4xl">{name}</h1>
-          <p className="mt-2 leading-7">{description}</p>
-
-          <h1 className="text-gray-700 mt-5">
-            {" "}
-            <span className="font-semibold">Date:</span> {date}
-          </h1>
-          <h1 className="text-gray-700">
-            <span className="font-semibold">Category: </span> {category}
-          </h1>
-          <h1>
-            <span className="font-semibold">Entry Fee:</span> {entry_fee} TK
-          </h1>
-          <h1 className="mb-4">
-            <span className="font-semibold">Location:</span> {location}
-          </h1>
+        <div className="lg:w-1/2 space-y-4">
+          <h1 className="text-4xl font-bold text-gray-800">{name}</h1>
+          <p className="text-gray-600 leading-relaxed">{description}</p>
+          <div className="mt-6 space-y-2 text-sm text-gray-700">
+            <p><span className="font-semibold">📅 Date:</span> {date}</p>
+            <p><span className="font-semibold">📁 Category:</span> {category}</p>
+            <p><span className="font-semibold">🎟️ Entry Fee:</span> {entry_fee} TK</p>
+            <p><span className="font-semibold">📍 Location:</span> {location}</p>
+          </div>
         </div>
       </div>
-      <div className="bg-gray-100 p-20 mb-20">
-        <form onSubmit={handleBook} className="w-1/2 mx-auto">
-          <h1 className="text-center font-bold mb-10 text-4xl">Book a Seat</h1>
+      <div className="bg-base-200 py-16 px-6 lg:px-32 rounded-xl shadow-inner mb-20">
+        <form
+          onSubmit={handleBook}
+          className="bg-white p-8 md:w-1/2 mx-auto rounded-xl shadow-md space-y-4"
+        >
+          <h2 className="text-3xl font-bold text-center text-indigo-600">Book a Seat</h2>
+
           <input
-            className="input w-full mb-2"
-            name="userName"
             type="text"
-            placeholder="Enter Name"
+            name="userName"
+            placeholder="Enter your name"
+            className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200"
           />
-          <br />
           <input
-            className="input w-full mb-2"
-            name="email"
             type="email"
-            placeholder="Enter Email"
+            name="email"
+            placeholder="Enter your email"
+            className="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200"
           />
-          <br />
-          <button className="btn btn-primary" type="submit">
-            Book a Seat
+
+          <button
+            type="submit"
+            className="btn btn-primary w-full hover:scale-[1.02] transition-transform duration-200"
+          >
+            Book Now
           </button>
         </form>
       </div>

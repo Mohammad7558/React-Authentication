@@ -25,30 +25,34 @@ const MyBooking = () => {
   }, []);
 
   useEffect(() => {
-    if(location.pathname === '/my-bookings'){
-      window.document.title = 'My Booking - Event Master'
+    if (location.pathname === "/my-bookings") {
+      window.document.title = "My Booking - Event Master";
     }
-  }, [location.pathname])
+  }, [location.pathname]);
 
   return (
-    <>
-    <div>
+    <div className="min-h-screen py-12 px-4 bg-gradient-to-br from-purple-100 via-white to-blue-100 backdrop-blur-md">
       {bookedEvent.length === 0 ? (
-        <NoBookedShow/>
+        <NoBookedShow />
       ) : (
         <>
-          <h2 className="text-center text-4xl mt-10">My Booked Events</h2>
-          {bookedEvent.map((event) => (
-            <DetailsBooking
-              key={event.id}
-              event={event}
-              handleRemove={handleRemove}
-            ></DetailsBooking>
-          ))}
+          <div className="max-w-4xl mx-auto text-center mb-10">
+            <h2 className="text-4xl font-bold text-gray-800 shadow-md inline-block px-6 py-2 rounded-lg bg-white/70 backdrop-blur-md">
+              My Booked Events
+            </h2>
+          </div>
+          <div className="space-y-8">
+            {bookedEvent.map((event) => (
+              <DetailsBooking
+                key={event.id}
+                event={event}
+                handleRemove={handleRemove}
+              />
+            ))}
+          </div>
         </>
       )}
     </div>
-    </>
   );
 };
 
