@@ -43,12 +43,10 @@ const Login = () => {
     createUserWithGoogle(provider)
       .then(result => {
         const user = result.user;
-        console.log(user);
         navigate(from, { replace: true });
         toast.success('User Log in Successfully');
       })
       .catch(error => {
-        console.log(error);
         toast.error(error.message);
       });
   };

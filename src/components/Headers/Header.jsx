@@ -15,7 +15,7 @@ const Header = () => {
         toast.success("User Logged Out");
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error.message)
       });
   };
 

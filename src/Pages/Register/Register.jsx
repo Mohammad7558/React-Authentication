@@ -5,7 +5,6 @@ import { AuthContext } from "../../provider/AuthContext";
 import { LuEyeClosed } from "react-icons/lu";
 import { GoogleAuthProvider } from "firebase/auth";
 import toast from "react-hot-toast";
-import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [passwordError, setPasswordError] = useState("");
@@ -74,12 +73,10 @@ const Register = () => {
     createUserWithGoogle(provider)
     .then(result => {
         const user = result.user;
-        console.log(user);
         navigate(from, { replace: true });
         toast.success('User create Successfully')
     })
     .catch(error => {
-        console.log(error);
         toast.error(error.message)
     })
   }
