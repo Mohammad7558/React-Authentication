@@ -15,12 +15,12 @@ const SingleEvent = ({ singleEvent }) => {
 
   return (
     <div className="px-4 py-6">
-      <div className="card w-full max-w-sm bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-indigo-500 rounded-xl">
+      <div className="card w-full  bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-indigo-500 rounded-xl">
         <figure className="overflow-hidden rounded-t-xl">
           <img
             src={thumbnail}
             alt={name}
-            className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+            className="w-full h-48 md:h-[300px] lg:h-48 object-cover transition-transform duration-300 hover:scale-105"
           />
         </figure>
         <div className="card-body p-6 space-y-4">
