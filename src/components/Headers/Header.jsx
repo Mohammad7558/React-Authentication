@@ -64,7 +64,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-x-4">
           <div
             className="tooltip tooltip-left"
-            data-tip={user?.displayName || "User"}
+            data-tip={user?.displayName || "No User"}
           >
             <img
               className="w-[54px] rounded-full border border-gray-300"
