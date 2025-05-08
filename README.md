@@ -2,6 +2,8 @@
 
 **Event Master** is a fully responsive event management web application that allows users to explore events, register or log in, and book or remove seats for their desired events. Built with modern technologies, it delivers a smooth user experience across all devices.
 
+🔗 **Live Link:** [https://event-master-3ebf5.firebaseapp.com/](https://event-master-3ebf5.firebaseapp.com/)
+
 ---
 
 ## 🔧 Features
