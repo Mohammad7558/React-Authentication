@@ -6,6 +6,10 @@
 
 ---
 
+### Homepage View
+
+![Homepage Screenshot](https://i.ibb.co/hxtgqPnz/event-master-3ebf5-firebaseapp-com-2.png)
+
 ## 🔧 Features
 
 - 🔐 **Authentication**
